@@ -12,6 +12,7 @@ public class AppContaCorrente {
         String nAgencia;
         String nContacorrente;
         boolean acesso=false;
+        int j;
 
         for(int i=0;i<agencia.length;i++){
 
@@ -30,6 +31,43 @@ public class AppContaCorrente {
 
         nAgencia=JOptionPane.showInputDialog("Digite o numero da Agencia");
         nContacorrente=JOptionPane.showInputDialog("Digite o numero da Conta");
+
+        for(j=0;j<agencia.length;j++){
+
+          if(nAgencia.equals(agencia[j].getIdAgencia()) && nContacorrente.equals(contaCorrente[j].getNumeroConta())){
+              acesso=true;
+              break;
+          }
+        }
+
+        if(acesso){
+
+            while (acesso) {
+
+                opcao = JOptionPane.showInputDialog("Seja bem vindo!!\n[C]Consultar saldo\n[D]Deposito na conta\n[S]Saque da conta\n[X]Sair.").charAt(0);
+
+                switch (opcao) {
+
+                    case 'C':
+                        System.out.println(contaCorrente[j].getSaldoConta());
+                        break;
+                    case 'D':
+                        contaCorrente[j].Deposito(Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do deposito: ")));
+                        break;
+                    case 'S':
+                        contaCorrente[j].Saque(Double.parseDouble(JOptionPane.showInputDialog("Digite o valor do saque: ")));
+                        break;
+                    case 'X':
+                        acesso = false;
+                        System.out.println("Obrigado por usar nosso APP!!");
+                        break;
+                }
+            }
+        }
+        else {
+
+            System.out.println("ID ou numero da conta errado!!");
+        }
 
     }
 }
