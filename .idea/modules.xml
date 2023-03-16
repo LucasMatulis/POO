@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ADO01/ADO01.iml" filepath="$PROJECT_DIR$/ADO01/ADO01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ADO02/ADO02.iml" filepath="$PROJECT_DIR$/ADO02/ADO02.iml" />
       <module fileurl="file://$PROJECT_DIR$/POO.iml" filepath="$PROJECT_DIR$/POO.iml" />
     </modules>
   </component>
